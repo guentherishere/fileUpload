@@ -16,10 +16,10 @@ app.use(cors());
 app.use(express.static(__dirname + '/public'));
 
 // Endpoints
-app.post('/user', User.create);
-app.get('/user', User.read);
-app.put('/user/:id', User.update);
-app.delete('/user/:id', User.delete);
+app.post('/api/user', User.create);
+app.get('/api/user', User.read);
+app.put('/api/user/:id', User.update);
+app.delete('/api/user/:id', User.delete);
 
 //API connection
 var port = 1337;

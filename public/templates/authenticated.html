@@ -1,0 +1,25 @@
+<h2>Add a file</h2>
+<a href="/#/add">Add New</a>
+<h2>Update/Delete a file</h2>
+<table>
+  <tr ng-repeat="file in files">
+    <td>{{file.title}}</td>
+    <td>{{file.description}}</td>
+    <td>{{file.price | currency}}</td>
+    <td>
+      <button>
+        <a href="/#/edit/{{file._id}}">Update
+        </a>
+      </button>
+    </td>
+    <td>
+      <button ng-click="deleteFile(file)">Delete</button>
+    </td>
+    <hr>
+  </tr>
+</table>
+<hr>
+
+<div>
+  {{files._id}}
+</div>
