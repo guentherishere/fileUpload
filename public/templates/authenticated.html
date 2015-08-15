@@ -1,6 +1,12 @@
 <h2>Add a file</h2>
 <a href="/#/add">Add New</a>
 <h2>Update/Delete a file</h2>
+
+//upload files
+<form action="/api/fileStore" enctype="multipart/form-data" id="uploadForm" method="post">
+  <input name="fileUpload" type="file"/>
+  <input name="submit" type="submit" value="Upload">
+</form>
 <table>
   <tr ng-repeat="file in files">
     <td>{{file.title}}</td>
